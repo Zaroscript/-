@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al-Meery | Business Growth Proposal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #060d18;
+      --bg-navy: #0a1424;
+      --card-bg: rgba(255, 255, 255, 0.02);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --soft-blue: #3b82f6;
+      --text-main: #ffffff;
+      --text-muted: #94a3b8;
+      --accent: #60a5fa;
+      --success: #10b981;
+      --danger: #ef4444;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section { padding: 100px 0; position: relative; }
+    h1, h2, h3, h4 { line-height: 1.4; font-weight: 800; }
+    
+    .section-title { margin-bottom: 50px; }
+    .section-title small { color: var(--soft-blue); font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 15px; font-size: 13px; text-transform: uppercase; }
+    .section-title h2 { font-size: 38px; color: var(--text-main); margin-bottom: 20px;}
+    .section-title p { color: var(--text-muted); max-width: 750px; font-size: 17px; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to left, rgba(6, 13, 24, 0.95) 0%, rgba(6, 13, 24, 0.7) 100%), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop') center/cover;
+      position: relative;
+    }
+    .hero .tag {
+      display: inline-block; padding: 8px 20px; border-radius: 50px; background: rgba(59, 130, 246, 0.1);
+      color: var(--soft-blue); border: 1px solid rgba(59, 130, 246, 0.2); font-size: 14px; font-weight: 700; margin-bottom: 30px;
+    }
+    .hero h1 { font-size: 56px; margin-bottom: 25px; letter-spacing: -1px; }
+    .hero p { font-size: 19px; color: var(--text-muted); max-width: 650px; margin-bottom: 40px; }
+    
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 12px;
+      font-weight: 700; text-decoration: none; transition: 0.3s ease; font-size: 16px;
+    }
+    .btn-primary { background: var(--soft-blue); color: #fff; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25); }
+
+    .modern-list-wrapper { display: flex; flex-direction: column; gap: 20px; }
+    .modern-list-item {
+      display: flex; gap: 25px; background: var(--card-bg); border: 1px solid var(--border-color);
+      padding: 35px; border-radius: 16px; border-right: 4px solid var(--soft-blue); transition: 0.3s ease;
+    }
+    .modern-list-item:hover { background: rgba(255, 255, 255, 0.04); transform: translateX(-5px); }
+    .modern-list-item .icon {
+      width: 50px; height: 50px; background: rgba(59, 130, 246, 0.1); color: var(--soft-blue);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+    }
+    .modern-list-content h3 { font-size: 20px; margin-bottom: 12px; color: #fff; }
+    .modern-list-content p { color: var(--text-muted); font-size: 16px; margin-bottom: 15px; }
+    .modern-list-content ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .modern-list-content li {
+      color: #cbd5e1; font-size: 15px; position: relative; padding-right: 20px;
+    }
+    .modern-list-content li::before {
+      content: '\f104'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+      color: var(--soft-blue); position: absolute; right: 0; top: 4px; font-size: 12px;
+    }
+
+    .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+    .chart-panel { background: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; }
+    .chart-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+    .chart-header i { font-size: 24px; color: var(--soft-blue); }
+    .chart-header h3 { font-size: 22px; }
+    .chart-desc { color: var(--text-muted); margin-bottom: 35px; font-size: 15px; }
+    
+    .bar-group { margin-bottom: 25px; }
+    .bar-info { display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: 600; font-size: 14px; }
+    .bar-info .value { color: var(--text-main); font-weight: 800; background: rgba(255,255,255,0.1); padding: 2px 10px; border-radius: 6px;}
+    .bar-track { width: 100%; height: 6px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--soft-blue); border-radius: 10px; position: relative; }
+    .chart-source {
+      margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);
+      font-size: 13px; color: #64748b; display: flex; align-items: center; gap: 8px;
+    }
+
+    .comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .comp-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 30px; }
+    .comp-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
+    .comp-header h3 { font-size: 18px; color: #fff; }
+    .comp-badge { font-size: 11px; padding: 4px 10px; border-radius: 50px; background: rgba(255,255,255,0.05); color: var(--text-muted); }
+    .comp-points { display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px; }
+    .point-row { display: flex; gap: 12px; align-items: flex-start; }
+    .point-icon { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; margin-top: 3px; }
+    .point-icon.pro { background: rgba(16, 185, 129, 0.1); color: var(--success); }
+    .point-icon.con { background: rgba(239, 68, 68, 0.1); color: var(--danger); }
+    .point-text h4 { font-size: 14px; color: #fff; margin-bottom: 3px; }
+    .point-text p { font-size: 13px; color: var(--text-muted); }
+    .opportunity-box { background: rgba(59, 130, 246, 0.05); border: 1px dashed var(--soft-blue); padding: 15px; border-radius: 12px; }
+    .opportunity-box span { display: block; font-size: 12px; color: var(--soft-blue); margin-bottom: 5px; font-weight: 700; }
+    .opportunity-box p { font-size: 14px; color: #cbd5e1; }
+
+    .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .visual-img { width: 100%; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    
+    .architecture-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 50px; text-align: center; }
+    .flow-steps { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; }
+    .flow-steps::before { content: ''; position: absolute; top: 35px; right: 5%; left: 5%; height: 2px; background: rgba(255,255,255,0.05); z-index: 1; border-top: 1px dashed var(--border-color); }
+    .step { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 15px; background: var(--bg-navy); padding: 0 10px; }
+    .step-icon { width: 70px; height: 70px; background: var(--bg-dark); border: 1px solid var(--soft-blue); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--text-main); }
+    .step h4 { font-size: 16px; }
+    
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+    .impact-item { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 20px; border-radius: 12px; text-align: center; }
+    .impact-item i { color: var(--soft-blue); font-size: 20px; margin-bottom: 10px; }
+    .impact-item span { display: block; font-size: 14px; color: #cbd5e1; font-weight: 600; }
+
+    @media (max-width: 1024px) {
+      .hero h1 { font-size: 42px; }
+      .charts-grid, .two-column, .comp-grid { grid-template-columns: 1fr; gap: 40px; }
+      .flow-steps { flex-direction: column; gap: 40px; }
+      .flow-steps::before { display: none; }
+      .impact-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .modern-list-item { flex-direction: column; padding: 25px; }
+      .impact-grid { grid-template-columns: 1fr; }
+      .step-icon { width: 60px; height: 60px; font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="tag">Business & Digital Strategy</div>
+      <h1>الانتقال بشركة الميري إلى القيادة الرقمية في السوق العقاري</h1>
+      <p>في سوق عقاري تتغير قواعده يومياً، لم يعد التواجد الرقمي مجرد "صفحة على فيسبوك". هذا الملف هو خارطة طريق عملية لرد الفجوة بين قوة مشاريعكم على أرض الواقع، وبين صورتكم أمام المستثمر الرقمي.</p>
+      <a href="#summary" class="btn btn-primary">
+        استعراض تفاصيل الخطة <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="summary">
+    <div class="container two-column">
+      <div>
+        <div class="section-title">
+          <small>Executive Summary</small>
+          <h2>رؤيتنا للوضع الحالي وفرصة النمو</h2>
+          <p>قبل أن نضع أي خطط تسويقية، كان يجب أن نقيم "الماكينة الإدارية والبيعية" الحالية للشركة. وجدنا أن هناك مجهوداً ضخماً يُبذل، لكنه مهدور بسبب غياب التنظيم الرقمي.</p>
+        </div>
+
+        <div class="modern-list-wrapper">
+          <div class="modern-list-item">
+            <div class="icon"><i class="fa-solid fa-eye-low-vision"></i></div>
+            <div class="modern-list-content">
+              <h3>المشكلة الحالية (The Bottleneck)</h3>
+              <p>الشركة تمتلك مشاريع قوية على الأرض، لكن "المستثمر الجديد" أو العميل المغترب لا يمكنه رؤية هذه القوة بسبب:</p>
+              <ul>
+                <li>اعتماد كلي على المجهود اليدوي في المتابعة (مما يسبب ضياع فرص بيعية).</li>
+                <li>غياب منصة رسمية (Website) تُطمن العميل وتُظهر حجم الكيان.</li>
+                <li>هوية بصرية لا تعكس "فخامة" المشاريع التي يتم بناؤها.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="modern-list-item">
+            <div class="icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <div class="modern-list-content">
+              <h3>أين تكمن الفرصة؟ (The Solution)</h3>
+              <p>بدلاً من حرق الميزانيات في إعلانات عشوائية، نحن نقترح بناء "أصل رقمي" للشركة:</p>
+              <ul>
+                <li>بناء Brand حقيقي يرفع من قيمة "المتر" في عين العميل قبل الشراء.</li>
+                <li>تأسيس نظام إدارة عملاء (CRM) يمنع نسيان أي عميل.</li>
+                <li>توسيع شريحة العملاء لتشمل المصريين بالخارج الباحثين عن استثمار آمن في الغردقة وسوهاج.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img width="100%" src="https://static.vecteezy.com/system/resources/previews/027/127/975/non_2x/corporate-green-color-stationery-design-vector.jpg">
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: var(--bg-navy);">
+    <div class="container">
+      <div class="section-title">
+        <small>Market Intelligence Data</small>
+        <h2>لماذا الآن؟ (لغة الأرقام)</h2>
+        <p>قمنا بتحليل السوقين اللذين تعمل بهما الشركة. الأرقام تؤكد أن المشتري العقاري يتجه حالياً للمطورين الذين يمتلكون "واجهة رقمية احترافية" كدليل مسبق على الالتزام وجودة البناء.</p>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-panel">
+          <div class="chart-header">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <h3>سوق الغردقة والبحر الأحمر</h3>
+          </div>
+          <p class="chart-desc">تحول جذري في نوعية المشتري. المغتربون والأجانب يبحثون عن مشاريع موثوقة عبر الإنترنت قبل زيارة مصر.</p>
+          
+          <div class="bar-group">
+            <div class="bar-info"><span>متوسط العائد الإيجاري المتوقع للمستثمر</span><span class="value">9% - 12%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 88%;"></div></div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-info"><span>حجم الطلب من المصريين بالخارج (أونلاين)</span><span class="value">+45% نمو</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 70%;"></div></div>
+          </div>
+          
+          <div class="chart-source"><i class="fa-solid fa-file-contract"></i> تقارير السوق العقاري المصري (Q4 2025) و Knight Frank</div>
+        </div>
+
+        <div class="chart-panel">
+          <div class="chart-header">
+            <i class="fa-solid fa-city"></i>
+            <h3>سوق سوهاج والصعيد</h3>
+          </div>
+          <p class="chart-desc">المنافسة تنتقل من "المعارف الشخصية" إلى "صناعة البراند". المشتري المحلي أصبح يقارن المشاريع بـ كمبوندات القاهرة.</p>
+          
+          <div class="bar-group">
+            <div class="bar-info"><span>التوجه نحو التجمعات المغلقة (Compounds)</span><span class="value">نمو حاد</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-info"><span>الاعتماد على البحث الرقمي قبل الشراء في الصعيد</span><span class="value">60%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 60%;"></div></div>
+          </div>
+          
+          <div class="chart-source"><i class="fa-solid fa-file-contract"></i> دراسات سلوك المستهلك العقاري بالمحافظات 2025/2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <small>Competitor & Gap Analysis</small>
+        <h2>تحليل المنافسين وتحديد "الثغرة"</h2>
+        <p>لكي نضع شركة الميري في المقدمة، قمنا بدراسة تحركات أبرز اللاعبين في أسواقكم الحالية لتحديد نقاط ضعفهم التي سنحولها إلى ميزة تنافسية لكم (Competitive Advantage).</p>
+      </div>
+
+      <div class="comp-grid">
+        <!-- Hurghada Competitor -->
+        <div class="comp-card">
+          <div class="comp-header">
+            <h3>المطورون الكبار في الغردقة (مثل Aldau و Somabay)</h3>
+            <span class="comp-badge">سوق البحر الأحمر</span>
+          </div>
+          <div class="comp-points">
+            <div class="point-row">
+              <div class="point-icon pro"><i class="fa-solid fa-check"></i></div>
+              <div class="point-text">
+                <h4>نقاط القوة</h4>
+                <p>هوية بصرية فارهة، تركيز عالي جداً على نمط الحياة (Lifestyle)، وميزانيات تسويق ضخمة.</p>
+              </div>
+            </div>
+            <div class="point-row">
+              <div class="point-icon con"><i class="fa-solid fa-xmark"></i></div>
+              <div class="point-text">
+                <h4>نقاط الضعف</h4>
+                <p>أسعار الدخول (Entry Ticket) مرتفعة جداً للمستثمر المتوسط، وبطء شديد في الرد على العملاء المحليين بسبب حجم المركزية لديهم.</p>
+              </div>
+            </div>
+          </div>
+          <div class="opportunity-box">
+            <span>فرصة الميري (The Gap):</span>
+            <p>السيطرة على الشريحة المتوسطة-العليا (Upper-Middle) بتقديم جودة عرض بصرية تضاهي الكبار، لكن مع سرعة استجابة ومرونة في أنظمة السداد لا يمتلكونها.</p>
+          </div>
+        </div>
+
+        <!-- Sohag Competitor -->
+        <div class="comp-card">
+          <div class="comp-header">
+            <h3>المطورون الإقليميون والمحليون (الصعيد / سوهاج)</h3>
+            <span class="comp-badge">سوق الصعيد</span>
+          </div>
+          <div class="comp-points">
+            <div class="point-row">
+              <div class="point-icon pro"><i class="fa-solid fa-check"></i></div>
+              <div class="point-text">
+                <h4>نقاط القوة</h4>
+                <p>علاقات قوية بالمعارف، فهم لطبيعة المشتري المحلي، وتواجد في مواقع حيوية.</p>
+              </div>
+            </div>
+            <div class="point-row">
+              <div class="point-icon con"><i class="fa-solid fa-xmark"></i></div>
+              <div class="point-text">
+                <h4>نقاط الضعف</h4>
+                <p>غياب تام لأي بنية تحتية رقمية (صفر CRM)، صفحات فيسبوك تفتقر للاحترافية، ولا يوجد قدرة على الوصول للمغتربين بشكل ممنهج.</p>
+              </div>
+            </div>
+          </div>
+          <div class="opportunity-box">
+            <span>فرصة الميري (The Gap):</span>
+            <p>الظهور كـ "الكيان الأكثر تطوراً وحداثة" في المنطقة. العميل في الصعيد متعطش للمطور الذي يقدم له تجربة شراء احترافية (مثل مطوري القاهرة).</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 30px; text-align: center; color: var(--text-muted); font-size: 14px;">
+        * يستند هذا التحليل إلى مراجعة ميدانية ورقمية لأساليب بيع وتسويق المطورين في المناطق المذكورة خلال الربع الأخير.
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: var(--bg-navy);">
+    <div class="container two-column">
+      <div>
+        <div class="section-title" style="margin-bottom: 30px;">
+          <small>Corporate Brand Identity</small>
+          <h2>بناء "كيان" وليس مجرد شعار</h2>
+          <p>في العقارات، العميل يشتري الثقة قبل الأسمنت. الصورة العشوائية على الإنترنت تجعل العميل يساوم في السعر. الحل هو بناء هوية بصرية (Brand Guidelines) متكاملة تفرض احترامها.</p>
+        </div>
+
+        <div class="modern-list-wrapper">
+          <div class="modern-list-item" style="background: transparent; border: none; padding: 0;">
+            <div class="modern-list-content">
+              <ul>
+                <li><strong>توحيد لغة العين:</strong> ألوان رسمية، خطوط هندسية، وطريقة عرض ثابتة لكل المشاريع.</li>
+                <li><strong>المطبوعات الفاخرة:</strong> تصميم كروت شخصية للمبيعات، بروشورات للمشاريع، وأوراق رسمية تعكس الفخامة.</li>
+                <li><strong>التأثير النفسي للاستثمار:</strong> استخدام درجات الـ Navy والأبيض لتعزيز الشعور بالأمان الاستثماري والاستقرار المالي للشركة.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- High-end Stationery/Brand Identity Mockup -->
+        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=1200&auto=format&fit=crop" alt="Corporate Branding Suite" class="visual-img">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title text-center" style="text-align: center;">
+        <small>System Architecture & Automation</small>
+        <h2>ماكينة التشغيل والمبيعات (The Sales Engine)</h2>
+        <p style="margin: 15px auto;">لن نترك مبيعات الشركة للصدفة أو لاجتهاد موظف. سنبني مساراً رقمياً يجبر العميل على تسجيل بياناته، ويوفر على فريق المبيعات وقت فرز العملاء غير الجادين.</p>
+      </div>
+
+      <div class="architecture-box">
+        <div class="flow-steps">
+          <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-magnet"></i></div>
+            <h4>استقطاب موجه</h4>
+            <span style="font-size: 13px; color: var(--text-muted);">إعلانات بدقة عالية</span>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-filter"></i></div>
+            <h4>فلترة تلقائية</h4>
+            <span style="font-size: 13px; color: var(--text-muted);">صفحات هبوط (Landing)</span>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-database"></i></div>
+            <h4>حفظ وتنظيم</h4>
+            <span style="font-size: 13px; color: var(--text-muted);">نظام CRM مركزي</span>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <h4>متابعة ذكية</h4>
+            <span style="font-size: 13px; color: var(--text-muted);">إشعارات للمبيعات</span>
+          </div>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-item">
+            <i class="fa-solid fa-stopwatch"></i>
+            <span>رد آلي فوري لمنع تسرب العميل في أوقات خارج العمل.</span>
+          </div>
+          <div class="impact-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>تكوين داتا تاريخية للشركة (أصول لا تقدر بثمن).</span>
+          </div>
+          <div class="impact-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>قياس أداء كل فرد في المبيعات بالأرقام الدقيقة.</span>
+          </div>
+          <div class="impact-item">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>رفع جودة العملاء (Qualified Leads) قبل المكالمة.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: var(--bg-navy);">
+    <div class="container">
+      <div class="section-title">
+        <small>Implementation Strategy</small>
+        <h2>منهجية العمل (خطوة بخطوة)</h2>
+        <p>نحن لا نفضل أسلوب "الحرق الإعلاني" المفاجئ. منهجيتنا تعتمد على تأسيس بنية تحتية قوية تتحمل الضغط، ثم نفتح صنابير التسويق تدريجياً لضمان أعلى عائد على الاستثمار.</p>
+      </div>
+
+      <div class="modern-list-wrapper">
+        <div class="modern-list-item">
+          <div class="icon"><i class="fa-solid fa-1"></i></div>
+          <div class="modern-list-content">
+            <h3>المرحلة الاستراتيجية الأولى: صب الأساسات (البنية الرقمية)</h3>
+            <p>التركيز على بناء الواجهة التي سيراها العميل، والأنظمة التي سيستخدمها فريق المبيعات.</p>
+            <ul style="flex-direction: row; flex-wrap: wrap; gap: 20px;">
+              <li style="width: 45%;">تطوير واعتماد الهوية البصرية للشركة.</li>
+              <li style="width: 45%;">برمجة الموقع الإلكتروني وصفحات الهبوط.</li>
+              <li style="width: 45%;">إعداد نظام الـ CRM وضبط مسارات المبيعات.</li>
+              <li style="width: 45%;">تجهيز المحتوى التعريفي وصور المشاريع.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modern-list-item">
+          <div class="icon"><i class="fa-solid fa-2"></i></div>
+          <div class="modern-list-content">
+            <h3>المرحلة الثانية: الإطلاق المنظم وجلب المبيعات</h3>
+            <p>الآن، البيت جاهز لاستقبال الضيوف. نبدأ في إطلاق الحملات الموجهة.</p>
+            <ul style="flex-direction: row; flex-wrap: wrap; gap: 20px;">
+              <li style="width: 45%;">إطلاق حملات استهداف المغتربين والمستثمرين.</li>
+              <li style="width: 45%;">تشغيل الردود الآلية وتوجيه الـ Leads للمبيعات.</li>
+              <li style="width: 45%;">مراقبة تكلفة العميل المحتمل (CPL) وتخفيضها.</li>
+              <li style="width: 45%;">بدء حملات إعادة الاستهداف (Retargeting).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(180deg, var(--bg-dark) 0%, #030810 100%); text-align: center; border-top: 1px solid var(--border-color);">
+    <div class="container" style="max-width: 850px;">
+      <h2 style="font-size: 38px; margin-bottom: 20px;">خلاصة القول لرئيس مجلس الإدارة</h2>
+      <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.8;">
+        "الهدف من هذه الشراكة ليس مجرد تحسين شكل التصميمات، بل مساعدتكم على بناء **منظومة عمل مؤسسية**. منظومة تجعل العميل يدفع وهو مطمئن، وتجعل فريق مبيعاتكم يعمل بذكاء وببيانات واضحة، لتكون شركة الميري هي الوجهة الأولى للاستثمار في الصعيد والبحر الأحمر."
+      </p>
+      <div style="display: inline-flex; align-items: center; gap: 10px; padding: 18px 35px; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--border-color); border-radius: 50px; color: #fff; font-weight: 600;">
+        <i class="fa-solid fa-handshake" style="color: var(--soft-blue);"></i> نحن جاهزون لبدء مرحلة التأسيس فور اعتمادكم للمقترح.
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
