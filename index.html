@@ -126,6 +126,23 @@
     .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
     .visual-img { width: 100%; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
     
+    .ref-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+    .ref-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; transition: 0.3s ease; display: flex; flex-direction: column;}
+    .ref-card:hover { transform: translateY(-5px); border-color: var(--soft-blue); box-shadow: 0 10px 30px rgba(0,0,0,0.2);}
+    .ref-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+    .ref-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column;}
+    .ref-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .ref-title h3 { font-size: 20px; color: #fff; font-weight: 800;}
+    .ref-title a { color: var(--soft-blue); font-size: 13px; text-decoration: none; display: flex; align-items: center; gap: 5px; font-weight: 700; transition: 0.2s;}
+    .ref-title a:hover { color: #fff; }
+    .ref-tags { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+    .ref-tag { font-size: 11px; padding: 4px 12px; background: rgba(59, 130, 246, 0.08); color: var(--soft-blue); border-radius: 50px; font-weight: 700; border: 1px solid rgba(59,130,246,0.15);}
+    .ref-desc { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;}
+    .ref-learn-title { font-size: 13px; color: #fff; font-weight: 700; margin-bottom: 10px; display: block;}
+    .ref-learn { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; margin-bottom: 0; margin-top: auto;}
+    .ref-learn li { font-size: 13px; color: #cbd5e1; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;}
+    .ref-learn li i { color: var(--soft-blue); font-size: 12px; margin-top: 4px;}
+
     .architecture-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 50px; text-align: center; }
     .flow-steps { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; }
     .flow-steps::before { content: ''; position: absolute; top: 35px; right: 5%; left: 5%; height: 2px; background: rgba(255,255,255,0.05); z-index: 1; border-top: 1px dashed var(--border-color); }
@@ -144,12 +161,14 @@
       .flow-steps { flex-direction: column; gap: 40px; }
       .flow-steps::before { display: none; }
       .impact-grid { grid-template-columns: repeat(2, 1fr); }
+      .ref-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .hero h1 { font-size: 36px; }
       .modern-list-item { flex-direction: column; padding: 25px; }
       .impact-grid { grid-template-columns: 1fr; }
       .step-icon { width: 60px; height: 60px; font-size: 20px; }
+      .ref-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -204,7 +223,7 @@
         </div>
       </div>
       <div>
-        <img width="100%" src="https://static.vecteezy.com/system/resources/previews/027/127/975/non_2x/corporate-green-color-stationery-design-vector.jpg">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" class="visual-img" alt="Corporate Building">
       </div>
     </div>
   </section>
@@ -354,7 +373,85 @@
       </div>
       <div>
         <!-- High-end Stationery/Brand Identity Mockup -->
-        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=1200&auto=format&fit=crop" alt="Corporate Branding Suite" class="visual-img">
+        <img src="https://static.vecteezy.com/system/resources/previews/027/127/975/non_2x/corporate-green-color-stationery-design-vector.jpg" alt="Corporate Branding Suite" class="visual-img">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title text-center" style="text-align: center;">
+        <small>UX/UI & Brand Benchmarks</small>
+        <h2>نماذج مرجعية من كبار السوق (البناء على ما نجح)</h2>
+        <p style="margin: 15px auto;">في عالم العقارات، الثقة تبدأ من أول "كليك". نحن لن نبدأ من الصفر، بل قمنا بتحليل أفضل المنصات العقارية في مصر لنستلهم منها تجربة المستخدم (UX) وقوة العرض البصري وتطبيقها بما يناسب هوية الميري.</p>
+      </div>
+
+      <div class="ref-grid">
+        <!-- Sodic Reference -->
+        <div class="ref-card">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop" alt="Sodic Reference Architecture" class="ref-img">
+          <div class="ref-content">
+            <div class="ref-title">
+              <h3>Sodic (سوديك)</h3>
+              <a href="https://sodic.com" target="_blank">زيارة الموقع <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="ref-tags">
+              <span class="ref-tag">Minimalism</span>
+              <span class="ref-tag">Corporate Feel</span>
+            </div>
+            <p class="ref-desc">تتميز سوديك بالبساطة الشديدة والاعتماد على المساحات الهادئة، مما يعطي إيحاءً فورياً بالفخامة والرقي في مشاريعهم.</p>
+            <span class="ref-learn-title">ماذا سنستلهم منهم لمشاريع الميري؟</span>
+            <ul class="ref-learn">
+              <li><i class="fa-solid fa-check"></i> بساطة واجهة المستخدم (UI) ونظافة التصميم.</li>
+              <li><i class="fa-solid fa-check"></i> طريقة عرض الماستر بلان (Masterplan) بدون ازدحام.</li>
+              <li><i class="fa-solid fa-check"></i> سرعة تصفح المشاريع للعميل المغترب.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mountain View Reference -->
+        <div class="ref-card">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="Mountain View Reference Lifestyle" class="ref-img">
+          <div class="ref-content">
+            <div class="ref-title">
+              <h3>Mountain View</h3>
+              <a href="https://mountainviewegypt.com" target="_blank">زيارة الموقع <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="ref-tags">
+              <span class="ref-tag">Lifestyle Concept</span>
+              <span class="ref-tag">Emotional Appeal</span>
+            </div>
+            <p class="ref-desc">موقع ماونتن فيو لا يبيع مجرد جدران أو خرسانة، بل يبيع "نمط حياة متكامل" من خلال الاعتماد المكثف على الصور الحيوية والعائلية.</p>
+            <span class="ref-learn-title">ماذا سنستلهم منهم لمشاريع الميري؟</span>
+            <ul class="ref-learn">
+              <li><i class="fa-solid fa-check"></i> ربط المشاريع بالمشاعر وصور الـ Lifestyle للعميل.</li>
+              <li><i class="fa-solid fa-check"></i> قوة توحيد الألوان (Brand Guidelines) عبر كل الصفحات.</li>
+              <li><i class="fa-solid fa-check"></i> هيكلة صفحة مميزات وخدمات الكمبوند (Amenities).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nawy Reference -->
+        <div class="ref-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Nawy Reference UX" class="ref-img">
+          <div class="ref-content">
+            <div class="ref-title">
+              <h3>Nawy (ناوي)</h3>
+              <a href="https://www.nawy.com" target="_blank">زيارة الموقع <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="ref-tags">
+              <span class="ref-tag">Search UX</span>
+              <span class="ref-tag">Lead Generation</span>
+            </div>
+            <p class="ref-desc">تعتبر منصة Nawy الأقوى تقنياً في مصر من حيث سرعة البحث، تنظيم البيانات، وقدرتها الفائقة على تجميع بيانات العملاء المحتملين.</p>
+            <span class="ref-learn-title">ماذا سنستلهم منهم لمشاريع الميري؟</span>
+            <ul class="ref-learn">
+              <li><i class="fa-solid fa-check"></i> نظام بحث وفلترة ذكي وسهل للوحدات المتاحة.</li>
+              <li><i class="fa-solid fa-check"></i> توزيع أزرار اتخاذ القرار (CTAs) بشكل يحفز على التسجيل.</li>
+              <li><i class="fa-solid fa-check"></i> مسار (User Flow) ممتاز لتحويل الزائر إلى Lead فعلي.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -368,7 +465,7 @@
       </div>
 
       <div class="architecture-box">
-        <div class="flow-steps">
+        <!-- <div class="flow-steps">
           <div class="step">
             <div class="step-icon"><i class="fa-solid fa-magnet"></i></div>
             <h4>استقطاب موجه</h4>
@@ -389,7 +486,7 @@
             <h4>متابعة ذكية</h4>
             <span style="font-size: 13px; color: var(--text-muted);">إشعارات للمبيعات</span>
           </div>
-        </div>
+        </div> -->
 
         <div class="impact-grid">
           <div class="impact-item">
@@ -455,7 +552,7 @@
 
   <section style="background: linear-gradient(180deg, var(--bg-dark) 0%, #030810 100%); text-align: center; border-top: 1px solid var(--border-color);">
     <div class="container" style="max-width: 850px;">
-      <h2 style="font-size: 38px; margin-bottom: 20px;">خلاصة القول لرئيس مجلس الإدارة</h2>
+      <h2 style="font-size: 38px; margin-bottom: 20px;">تلخيصا لما سبق</h2>
       <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.8;">
         "الهدف من هذه الشراكة ليس مجرد تحسين شكل التصميمات، بل مساعدتكم على بناء **منظومة عمل مؤسسية**. منظومة تجعل العميل يدفع وهو مطمئن، وتجعل فريق مبيعاتكم يعمل بذكاء وببيانات واضحة، لتكون شركة الميري هي الوجهة الأولى للاستثمار في الصعيد والبحر الأحمر."
       </p>
