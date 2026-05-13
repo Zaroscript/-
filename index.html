@@ -155,6 +155,27 @@
     .impact-item i { color: var(--soft-blue); font-size: 20px; margin-bottom: 10px; }
     .impact-item span { display: block; font-size: 14px; color: #cbd5e1; font-weight: 600; }
 
+    /* Operational Plan */
+    .ops-cycle-label { display: inline-flex; align-items: center; gap: 10px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); padding: 8px 20px; border-radius: 50px; color: var(--soft-blue); font-size: 13px; font-weight: 700; margin-bottom: 50px; }
+    .ops-cycle-label span { width: 8px; height: 8px; background: var(--soft-blue); border-radius: 50%; animation: pulse-dot 1.5s infinite; display: inline-block; }
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+    .ops-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+    .ops-pillar { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 35px; transition: 0.3s ease; position: relative; overflow: hidden; }
+    .ops-pillar::before { content:''; position:absolute; top:0; right:0; width:4px; height:100%; background: linear-gradient(180deg, var(--soft-blue), transparent); border-radius: 0 20px 20px 0; }
+    .ops-pillar:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-4px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+    .ops-pillar-icon { width: 55px; height: 55px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); color: var(--soft-blue); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+    .ops-pillar h3 { font-size: 19px; color: #fff; margin-bottom: 10px; }
+    .ops-pillar > p { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.7; }
+    .ops-deliverables { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .ops-deliverables li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #cbd5e1; }
+    .ops-deliverables li i { color: var(--soft-blue); font-size: 11px; margin-top: 5px; flex-shrink: 0; }
+    .ops-footer-note { margin-top: 50px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.12); border-radius: 16px; padding: 30px 40px; display: flex; gap: 20px; align-items: flex-start; }
+    .ops-footer-note i { color: var(--soft-blue); font-size: 24px; flex-shrink: 0; margin-top: 4px; }
+    .ops-footer-note p { color: var(--text-muted); font-size: 15px; line-height: 1.8; }
+    .ops-footer-note p strong { color: #fff; }
+    @media(max-width:1024px){ .ops-pillars { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:768px){ .ops-pillars { grid-template-columns: 1fr; } }
+
     @media (max-width: 1024px) {
       .hero h1 { font-size: 42px; }
       .charts-grid, .two-column, .comp-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -179,9 +200,38 @@
       <div class="tag">Business & Digital Strategy</div>
       <h1>الانتقال بشركة الميري إلى القيادة الرقمية في السوق العقاري</h1>
       <p>في سوق عقاري تتغير قواعده يومياً، لم يعد التواجد الرقمي مجرد "صفحة على فيسبوك". هذا الملف هو خارطة طريق عملية لرد الفجوة بين قوة مشاريعكم على أرض الواقع، وبين صورتكم أمام المستثمر الرقمي.</p>
-      <a href="#summary" class="btn btn-primary">
+      <a href="#welcome" class="btn btn-primary">
         استعراض تفاصيل الخطة <i class="fa-solid fa-arrow-left"></i>
       </a>
+    </div>
+  </section>
+
+  <section id="welcome" style="background-color: var(--bg-navy);">
+    <div class="container two-column" style="align-items: center;">
+      <div>
+        <div class="section-title">
+          <small>Welcome</small>
+          <h2>مرحباً بكم من <span style="color: var(--soft-blue);">Growth Mindset Team</span></h2>
+          <p>أهلاً ومرحباً بشركة الميري للتطوير العقاري. نحن "Growth Mindset Team"، فريق من الخبراء المتخصصين في تحويل الرؤى العقارية إلى نجاحات رقمية ملموسة. نؤمن بأن النمو ليس مجرد صدفة، بل هو استراتيجية مدروسة وعقلية مبتكرة.</p>
+        </div>
+
+        <div class="modern-list-wrapper">
+          <div class="modern-list-item" style="padding: 25px;">
+            <div class="icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div class="modern-list-content">
+              <h3>من نحن؟</h3>
+              <p>نحن شريكك الاستراتيجي في رحلة التحول الرقمي. لا نقدم مجرد خدمات تسويقية، بل نصنع واجهات مؤسسية تعكس حجم كيانكم الحقيقي وتعزز ثقة المستثمرين.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; display: inline-flex; flex-direction: column; align-items: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); position: relative; overflow: hidden; width: 320px; height: 320px; justify-content: center;">
+          <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(40px);"></div>
+          <div style="position: absolute; bottom: -50px; right: -50px; width: 150px; height: 150px; background: rgba(16, 185, 129, 0.05); border-radius: 50%; filter: blur(40px);"></div>
+          <img src="GMT-logo.png" alt="Growth Mindset Team Logo" style="max-width: 100%; max-height: 100%; position: relative; z-index: 2; object-fit: contain;">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -513,39 +563,100 @@
   <section style="background-color: var(--bg-navy);">
     <div class="container">
       <div class="section-title">
-        <small>Implementation Strategy</small>
-        <h2>منهجية العمل (خطوة بخطوة)</h2>
-        <p>نحن لا نفضل أسلوب "الحرق الإعلاني" المفاجئ. منهجيتنا تعتمد على تأسيس بنية تحتية قوية تتحمل الضغط، ثم نفتح صنابير التسويق تدريجياً لضمان أعلى عائد على الاستثمار.</p>
+        <small>Ongoing Operational Plan</small>
+        <h2>خطة العمل التشغيلية الدائمة</h2>
+        <p>هذه ليست مجرد خطة لمرة واحدة — بل هي منظومة متكاملة من المحاور التي تعمل بشكل مستمر ومتكامل لبناء حضور رقمي قوي وقابل للقياس لشركة الميري.</p>
       </div>
 
-      <div class="modern-list-wrapper">
-        <div class="modern-list-item">
-          <div class="icon"><i class="fa-solid fa-1"></i></div>
-          <div class="modern-list-content">
-            <h3>المرحلة الاستراتيجية الأولى: صب الأساسات (البنية الرقمية)</h3>
-            <p>التركيز على بناء الواجهة التي سيراها العميل، والأنظمة التي سيستخدمها فريق المبيعات.</p>
-            <ul style="flex-direction: row; flex-wrap: wrap; gap: 20px;">
-              <li style="width: 45%;">تطوير واعتماد الهوية البصرية للشركة.</li>
-              <li style="width: 45%;">برمجة الموقع الإلكتروني وصفحات الهبوط.</li>
-              <li style="width: 45%;">إعداد نظام الـ CRM وضبط مسارات المبيعات.</li>
-              <li style="width: 45%;">تجهيز المحتوى التعريفي وصور المشاريع.</li>
-            </ul>
-          </div>
+      <div style="text-align: center;">
+        <div class="ops-cycle-label"><span></span> دورة عمل مستمرة ومتجددة</div>
+      </div>
+
+      <div class="ops-pillars">
+
+        <!-- Pillar 1: Brand & Identity -->
+        <div class="ops-pillar">
+          <div class="ops-pillar-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <h3>الهوية البصرية والبراند</h3>
+          <p>بناء كيان بصري متماسك يُصبح "بصمة" الميري الراسخة في ذهن العميل قبل أي قرار شراء.</p>
+          <ul class="ops-deliverables">
+            <li><i class="fa-solid fa-circle"></i> اعتماد Brand Book كامل (ألوان، خطوط، أسلوب التصوير)</li>
+            <li><i class="fa-solid fa-circle"></i> تصميم التمبلت الرسمية للمنشورات والقصص</li>
+            <li><i class="fa-solid fa-circle"></i> هوية موحدة لكل مشروع (Brochure، Banner، Signage)</li>
+            <li><i class="fa-solid fa-circle"></i> مراجعة دورية لاتساق الهوية عبر كل المنصات</li>
+          </ul>
         </div>
 
-        <div class="modern-list-item">
-          <div class="icon"><i class="fa-solid fa-2"></i></div>
-          <div class="modern-list-content">
-            <h3>المرحلة الثانية: الإطلاق المنظم وجلب المبيعات</h3>
-            <p>الآن، البيت جاهز لاستقبال الضيوف. نبدأ في إطلاق الحملات الموجهة.</p>
-            <ul style="flex-direction: row; flex-wrap: wrap; gap: 20px;">
-              <li style="width: 45%;">إطلاق حملات استهداف المغتربين والمستثمرين.</li>
-              <li style="width: 45%;">تشغيل الردود الآلية وتوجيه الـ Leads للمبيعات.</li>
-              <li style="width: 45%;">مراقبة تكلفة العميل المحتمل (CPL) وتخفيضها.</li>
-              <li style="width: 45%;">بدء حملات إعادة الاستهداف (Retargeting).</li>
-            </ul>
-          </div>
+        <!-- Pillar 2: Content & Social Media -->
+        <div class="ops-pillar">
+          <div class="ops-pillar-icon"><i class="fa-solid fa-photo-film"></i></div>
+          <h3>المحتوى وإدارة المنصات</h3>
+          <p>محتوى هادف ومنتظم يحول المتابع الفضولي إلى عميل جاد — لا نشر عشوائي بلا هدف.</p>
+          <ul class="ops-deliverables">
+            <li><i class="fa-solid fa-circle"></i> خطة محتوى شهرية معتمدة مسبقاً</li>
+            <li><i class="fa-solid fa-circle"></i> إنتاج Reels وShortsتسويقية للمشاريع</li>
+            <li><i class="fa-solid fa-circle"></i> محتوى تعليمي (استثماري) يرفع مصداقية الميري</li>
+            <li><i class="fa-solid fa-circle"></i> إدارة التعليقات والرسائل وبناء المجتمع</li>
+          </ul>
         </div>
+
+        <!-- Pillar 3: Performance Advertising -->
+        <div class="ops-pillar">
+          <div class="ops-pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>الإعلانات الممولة والاستهداف</h3>
+          <p>إعلانات مدروسة تُوصل رسالة الميري لمن يبحث عن الاستثمار — لا إنفاق بلا عائد.</p>
+          <ul class="ops-deliverables">
+            <li><i class="fa-solid fa-circle"></i> حملات Meta Ads (فيسبوك وإنستغرام) موجهة بدقة</li>
+            <li><i class="fa-solid fa-circle"></i> استهداف المصريين بالخارج في دول الخليج وأوروبا</li>
+            <li><i class="fa-solid fa-circle"></i> حملات Retargeting لإعادة استهداف الزوار المهتمين</li>
+            <li><i class="fa-solid fa-circle"></i> تقرير أداء دوري (CPL، Reach، Conversion Rate)</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4: Digital Presence -->
+        <div class="ops-pillar">
+          <div class="ops-pillar-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>الحضور الرقمي والموقع</h3>
+          <p>الموقع الإلكتروني هو "المقر الرئيسي الرقمي" للميري — يعمل 24/7 لتحويل الزوار إلى مستثمرين.</p>
+          <ul class="ops-deliverables">
+            <li><i class="fa-solid fa-circle"></i> موقع إلكتروني احترافي يعرض المشاريع والوحدات</li>
+            <li><i class="fa-solid fa-circle"></i> صفحات هبوط (Landing Pages) لكل مشروع بشكل منفصل</li>
+            <li><i class="fa-solid fa-circle"></i> تحسين محركات البحث (SEO) لظهور الميري أمام الباحثين</li>
+            <li><i class="fa-solid fa-circle"></i> تحديث المحتوى وعرض الوحدات المتاحة بشكل مستمر</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 5: CRM & Lead Management -->
+        <div class="ops-pillar">
+          <div class="ops-pillar-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>إدارة العملاء والـ CRM</h3>
+          <p>لا عميل يضيع — كل Lead يُسجَّل ويُتابَع بشكل منهجي حتى يتخذ قرار الشراء.</p>
+          <ul class="ops-deliverables">
+            <li><i class="fa-solid fa-circle"></i> إعداد نظام CRM مخصص لطبيعة مبيعات الميري</li>
+            <li><i class="fa-solid fa-circle"></i> تصنيف العملاء (Hot / Warm / Cold) تلقائياً</li>
+            <li><i class="fa-solid fa-circle"></i> ردود آلية فورية خارج ساعات العمل (WhatsApp Bot)</li>
+            <li><i class="fa-solid fa-circle"></i> تقارير دورية لأداء فريق المبيعات بالأرقام</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 6: Analytics & Optimization -->
+        <div class="ops-pillar">
+          <div class="ops-pillar-icon"><i class="fa-solid fa-chart-mixed"></i></div>
+          <h3>التحليل والتحسين المستمر</h3>
+          <p>كل شيء قابل للقياس — ما يُقاس يُحسَّن. نعمل باستمرار على رفع الكفاءة وتخفيض التكلفة.</p>
+          <ul class="ops-deliverables">
+            <li><i class="fa-solid fa-circle"></i> Dashboard موحد لمتابعة كل المؤشرات في مكان واحد</li>
+            <li><i class="fa-solid fa-circle"></i> تقارير أداء دورية: ما نجح وما يحتاج تعديل</li>
+            <li><i class="fa-solid fa-circle"></i> A/B Testing للإعلانات والمحتوى لاختيار الأفضل</li>
+            <li><i class="fa-solid fa-circle"></i> اجتماعات مراجعة دورية لمحاذاة الخطة مع أهداف الميري</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="ops-footer-note">
+        <i class="fa-solid fa-rotate"></i>
+        <p><strong>هذه المحاور الستة تعمل كمنظومة متكاملة وليس كأعمال منفصلة.</strong> كل محور يُغذّي الآخر — المحتوى يدعم الإعلانات، والإعلانات تجلب الـ Leads، والـ CRM يحوّل الـ Leads إلى مبيعات، والتحليل يُحسّن كل دورة قادمة. النتيجة النهائية: ماكينة مبيعات رقمية تعمل على مدار الساعة لصالح شركة الميري.</p>
       </div>
     </div>
   </section>
@@ -558,6 +669,15 @@
       </p>
       <div style="display: inline-flex; align-items: center; gap: 10px; padding: 18px 35px; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--border-color); border-radius: 50px; color: #fff; font-weight: 600;">
         <i class="fa-solid fa-handshake" style="color: var(--soft-blue);"></i> نحن جاهزون لبدء مرحلة التأسيس فور اعتمادكم للمقترح.
+      </div>
+
+      <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+        <h3 style="color: var(--soft-blue); font-size: 28px; margin-bottom: 15px;">شكراً لوقتكم الثمين</h3>
+        <p style="color: var(--text-muted); font-size: 17px; margin-bottom: 20px;">نقدر جداً وقتكم في مراجعة هذا المقترح، ونتطلع بشغف لنكون شركاء النجاح في الخطوة القادمة لشركة الميري.</p>
+        <div style="display: inline-flex; align-items: center; gap: 12px;">
+          <img src="GMT-logo.png" alt="GMT Logo" style="height: 40px; width: auto; object-fit: contain;">
+          <span style="color: #fff; font-weight: 800; font-size: 18px; letter-spacing: 1px;">Growth Mindset Team</span>
+        </div>
       </div>
     </div>
   </section>
